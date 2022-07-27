@@ -1,25 +1,39 @@
 import React from 'react';
 import type {Node} from 'react';
-import {NativeBaseProvider, Text, Box, extendTheme} from 'native-base';
+import {
+  NativeBaseProvider,
+  v3CompatibleTheme,
+  Text,
+  Box,
+  extendTheme,
+  ScrollView,
+  StatusBar,
+} from 'native-base';
 
 import {MauthurulaTheme} from './src/theme/base/index';
+import ArticleCard from './src/components/ArticleCard';
+import Icon from 'react-native-vector-icons/Ionicons';
 
-const theme = extendTheme(MauthurulaTheme);
+
+const theme = extendTheme(v3CompatibleTheme, MauthurulaTheme);
 
 const App: () => Node = () => {
   return (
     <NativeBaseProvider theme={theme}>
-      <Box flex={1} bg="#ff4433" alignItem="center" justifyConetent="center">
-        <Text> Hansana Rrnawera is</Text>
-      </Box>
-      <Box flex={2} bg="#1732" alignItem="center" justifyConetent="center">
-        <Text> Hansana Rrnawera is</Text>
-      </Box>
-      <Box flex={3} bg="#ffff33" alignItem="center" justifyConetent="center">
-        <Text> Hansana Rrnawera is</Text>
-      </Box>
+            <StatusBar></StatusBar>
+      <ScrollView >
+      <Text fontSize="xl" alignItems="center" textAlign="center">මව් තුරුල </Text>
+        <Box bg="#dddddd" alignItems="center" justifyContent="space-evenly" safeArea>
+        <Icon name="md-menu" size={30} color="#900" />
+
+          <ArticleCard />
+          <ArticleCard />
+          <ArticleCard />
+        </Box>
+        </ScrollView>
     </NativeBaseProvider>
   );
 };
+
 
 export default App;

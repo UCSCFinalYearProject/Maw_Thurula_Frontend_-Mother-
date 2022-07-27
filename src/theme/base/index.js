@@ -7,6 +7,8 @@ import sizes from './sizes';
 import {spacing} from './space';
 import typography from './typography';
 import opacity from './opacity';
+import fontConfig from './font';
+import component from './components';
 
 const MauthurulaTheme = {
   borderWidths,
@@ -18,6 +20,8 @@ const MauthurulaTheme = {
   space: spacing,
   shadows,
   opacity,
+  fontConfig,
+  component
 };
 
 export default MauthurulaTheme;
