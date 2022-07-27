@@ -24,6 +24,7 @@ import {
   Alert, Platform,
   StatusBar, Dimensions,
 } from "react-native";
+import SplashScreen from './src/pages/SplashScreen';
 
 const theme = extendTheme(v3CompatibleTheme, MauthurulaTheme);
 
@@ -37,7 +38,6 @@ const App: () => Node = () => {
             console.log('Clicked');
           }}>
           <Image
-            blurRadius={1}
             fadeDuration={10000}
             source={{
               uri: 'https://picsum.photos/200/300',
@@ -54,6 +54,7 @@ const App: () => Node = () => {
           }}
           title={' Click'}
         />
+        <SplashScreen/>
         <Text numberOfLines={1}>
           Hello ReactHello ReactHello ReactHello ReactHello ReactHello
           ReactHello ReactHello ReactHello ReactHello ReactHello ReactHello
